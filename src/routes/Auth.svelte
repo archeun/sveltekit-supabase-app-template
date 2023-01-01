@@ -8,6 +8,6 @@
     }
 </script>
 
-<div class="row flex-center flex">
-    <button on:click={signInWithGoogle}>Sign in with Google</button>
+<div class="flex justify-center">
+    <button class="btn btn-primary" on:click={signInWithGoogle}>Sign in with Google</button>
 </div>

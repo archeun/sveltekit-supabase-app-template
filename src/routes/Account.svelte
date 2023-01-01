@@ -77,23 +77,30 @@
     }
 </script>
 
-<form class="form-widget" on:submit|preventDefault="{updateProfile}">
-    <img alt="{username}" src="{avatarUrl}">
-    <div>
-        <label for="email">Email</label>
-        <input id="email" type="text" value="{session.user.email}" disabled/>
+<div class="flex justify-center">
+    <div class="card w-96 bg-base-100 shadow-lg bg-info">
+        <figure class="pt-5"><img alt="{username}" src="{avatarUrl}"></figure>
+        <div class="card-body">
+            <form class="form-widget" on:submit|preventDefault="{updateProfile}">
+                <p class="mb-3">
+                    <label class="input-group">
+                        <span>Email</span>
+                        <input id="email" type="text" class="input w-full max-w-xs" value="{session.user.email}"
+                               disabled/>
+                    </label>
+                </p>
+                <p class="mb-3">
+                    <label class="input-group">
+                        <span>Name</span>
+                        <input id="username" type="text" class="input w-full max-w-xs" bind:value="{username}"/>
+                    </label>
+                </p>
+                <div class="card-actions justify-end">
+                    <input type="submit" class="btn btn-primary" value={loading ? 'Loading...' : 'Update'}
+                           disabled={loading}/>
+                    <button class="btn" on:click="{signOut}" disabled="{loading}">Sign Out</button>
+                </div>
+            </form>
+        </div>
     </div>
-    <div>
-        <label for="username">Name</label>
-        <input id="username" type="text" bind:value="{username}"/>
-    </div>
-
-    <div>
-        <input type="submit" class="button block primary" value={loading ? 'Loading...' : 'Update'}
-               disabled={loading}/>
-    </div>
-
-    <div>
-        <button class="button block" on:click="{signOut}" disabled="{loading}">Sign Out</button>
-    </div>
-</form>
+</div>
