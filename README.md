@@ -19,7 +19,7 @@ This template repository can be used as a skeleton for developing a web app that
   ```
   PUBLIC_SUPABASE_URL=
   PUBLIC_SUPABASE_ANON_KEY=
-- Create a Supabase project (if you have already created one you may use it).
+- Create a new Supabase project
 - Navigate to the Project Settings page in Supabase.
 - Select the API settings page.
 - Navigate to Project URL section and copy the `URL`.
@@ -30,6 +30,10 @@ This template repository can be used as a skeleton for developing a web app that
 - Paste it into the `.env` file in front of the `PUBLIC_SUPABASE_URL` key. It should look like this.
   ```
   PUBLIC_SUPABASE_ANON_KEY=<anon-key>
-- 
+- Navigate to the `Table Editor` section and create a new table to store the user information.
+Please refer to the below sample screenshot
+
+[Create users table](docs/installation/img/create-user-table.png)
+![Create users table](/docs/installation/img/create-user-table.png?raw=true "Create users table")
 
 Coming soon...
