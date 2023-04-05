@@ -1,5 +1,5 @@
 {
-	"name": "kwenza",
+	"name": "sveltekit-supabase-app-template",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
